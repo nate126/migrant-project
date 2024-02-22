@@ -1,7 +1,10 @@
-from django.urls import path
+from django.urls import include, path
 
-from . import views
+from pages import admin
+
+from .views import home_page_view, shelter_page_view
 
 urlpatterns = [
-    path("", views.home_page_view, name="home"),
+    path('admin/', admin.site.urls),
+    path('pages/', include('pages.urls')),
 ]

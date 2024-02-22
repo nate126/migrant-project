@@ -1,0 +1,54 @@
+<nav>
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">MiCenterNYC</a>
+        <div class="inner-nav collapse navbar-collapse" id="navbarScroll">
+            <ul>
+                <div class="flex-start">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about-us">About Us</a>
+                    </li>
+                </div>
+                <a class="nav-link" href="/near-me">
+                    <li class="nav-item near-me">
+                        Near Me
+                    </li>
+                </a>
+            </ul>
+        </div>
+    </div>
+<!-- </nav>
+<span onclick="toggleMobileNavBar" class="open-nav material-symbols-outlined">
+    menu
+</span>
+<nav class="mobile-nav">
+    <div class="inner-nav">
+        <a href="/" class="navbar-brand">MiCenterNYC</a>
+        <ul>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/about-us">About Us</a>
+            </li>
+        </ul>
+    </div>
+</nav> -->
+
+{% block scripts %}
+<script type="module">
+    function toggleMobileNavBar() {
+        const mobileNav = document.querySelector('.mobile-nav');
+        mobileNav.classList.toggle('open');
+        if (mobileNav.classList.contains('open')) {
+            document.querySelector('.open-nav').textContent = 'close';
+            document.querySelector('.open-nav').classList.add("close")
+        } else {
+            document.querySelector('.open-nav').textContent = 'menu';
+            document.querySelector('.open-nav').classList.remove("close")
+        }
+    }
+</script>
+{% endblock %}

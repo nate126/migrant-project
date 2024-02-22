@@ -1,0 +1,21 @@
+{% extends "pages/base.html" %}
+
+{% block title %}
+Shelters Near You
+{% endblock %}
+{% block content %}
+<main class="shelters">
+    <h1>Shelters Near You</h1>
+    <p>Find a shelter near you.</p>
+    <hr>
+    <div class="shelters-container">
+        {% for shelter in shelters %}
+            <div class="shelter">
+                <h3>{{ shelter.center_name }}</h2>
+                <p>{{ shelter.borough }}</p>
+                <p>{{ shelter.address }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</main>
+{% endblock %}
