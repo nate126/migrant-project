@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&family=Inter:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* Fonts */
+h1, h2, h3, h4, h5, h6 {
+    text-transform: capitalize;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    letter-spacing: 0.4px;
+}
+span, text, p, a, li, label, input, button {
+    font-family: "Arapey", serif;
+    font-optical-sizing: auto;
+    letter-spacing: 0.4px;
+}
+
+/* Universal */
+body {
+    margin: 1.5rem;
+}
+/* Shelters Page */
+.shelter {
+    border: .75px solid black;
+    padding: 0 10px;
+    border-radius: 10px;
+}
+.shelters-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+}
