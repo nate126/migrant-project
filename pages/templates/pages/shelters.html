@@ -11,9 +11,9 @@ Shelters Near You
     <div class="shelters-container">
         {% for shelter in shelters %}
             <div class="shelter">
-                <h3>{{ shelter.center_name }}</h2>
-                <p>{{ shelter.borough }}</p>
-                <p>{{ shelter.address }}</p>
+                <h3>{{ shelter.name }}</h2>
+                <p>{{ shelter.city }}</p>
+                <p>{{ shelter.adress }}</p>
             </div>
         {% endfor %}
     </div>

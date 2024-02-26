@@ -1,3 +1,9 @@
+from decouple import config
+
+
+
+GOOGLE_MAPS_API_KEY = config('GOOGLE_MAPS_API_KEY')
+
 """
 Django settings for migrant_project project.
 
@@ -16,7 +22,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-GOOGLE_API_KEY = 'AIzaSyBudDAel4hrhurK0iGmhl9H3kMvzwZ3IqY'
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/

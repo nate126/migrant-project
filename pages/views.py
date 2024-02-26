@@ -1,13 +1,18 @@
 from django.views.generic import ListView
 from .models import *
+from django.http import HttpResponse
+from django.shortcuts import render
 
 
-class HomeView(ListView):
-    template_name = "project_content/home.html"
-    context_object_name = "mydata"
-    model = Locations
-    #form_class = EmailForm
-    success_url = "/"
+
+def home_page_view(request):
+    return HttpResponse("Hello World")
+
+def shelters(request):
+    model= Locations
+    context_object_name = "shelter"
+    return render(request, 'pages/shelters.html',{context_object_name: model.objects.all()})
+
 
 
 
