@@ -18,15 +18,64 @@ span, text, p, a, li, label, input, button {
 /* Universal */
 body {
     margin: 1.5rem;
+    min-height: 100vh;
 }
 /* Shelters Page */
 .shelter {
-    border: .75px solid black;
+    background: linear-gradient(180deg, rgba(14, 15, 36, 0.5), rgba(14, 15, 36, 1));
+    color: white;
+    border-radius: 5px;
+}
+.shelter h3 {
+    padding-bottom: 4px;
+    border-bottom: 0.5px solid white;
+}
+.shelter img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    position: relative;
+    z-index: -1;
+    filter: blur(2px);
+}
+.shelter .text {
+    margin-top: -70px;
     padding: 0 10px;
-    border-radius: 10px;
+}
+.shelter p {
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
 }
 .shelters-container {
+    margin-top: 30px;
     display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 1024px) {
+    .shelters-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 768px) {
+    .shelters-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 480px) {
+    .shelters-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Footer */
+footer {
+    margin-top: 60px;
+    width: 100%;
+    text-align: center;
+    
+}
+footer p {  
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
 }
