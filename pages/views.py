@@ -1,13 +1,14 @@
 from django.views.generic import ListView
-from .models import *
-
-
-class HomeView(ListView):
-    template_name = "project_content/home.html"
-    context_object_name = "mydata"
-    model = Locations
-    #form_class = EmailForm
-    success_url = "/"
+from .data import *
+from django.http import HttpResponse
+from django.shortcuts import render
 
 
 
+def home_page_view(request):
+    return HttpResponse("Hello World")
+
+def shelters(request):
+    data = getLocations()
+    data = data["results"]
+    return render(request, 'pages/shelters.html', {"shelters" : data})

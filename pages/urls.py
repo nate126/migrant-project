@@ -7,5 +7,5 @@ from .views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('pages/', include('pages.urls')),
-    path("", HomeView.as_view(), name= 'my_home_view')
+    path("", home_page_view.as_view(), name= 'my_home_view')
 ]
