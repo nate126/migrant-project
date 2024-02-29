@@ -21,3 +21,21 @@ python3 manage.py migrate
 # Start the server
 python3 manage.py runserver
 ```
+## Install Packages
+```bash
+    pip install annotated-types 
+    pip install anyio
+    pip install asgiref
+    pip install blinker
+    pip install certifi
+    pip install django-google-maps
+    pip install django-extensions
+    pip install h11
+    pip install httpx
+    pip install idna
+    pip install itsdangerous
+    pip install Jinja2
+    pip install pywatchman
+    pip install requests
+    pip install urllib3
+```
