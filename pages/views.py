@@ -12,3 +12,6 @@ def shelters(request):
     data = getLocations()
     data = data["results"]
     return render(request, 'pages/shelters.html', {"shelters" : data})
+
+def about_us(request):
+    return render(request, 'pages/about_us.html')

@@ -67,7 +67,10 @@ body {
         grid-template-columns: 1fr;
     }
 }
-
+/* About Us */
+.about-us h1 {
+    text-align: center;
+}
 /* Footer */
 footer {
     margin-top: 60px;
