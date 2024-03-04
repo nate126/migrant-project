@@ -7,7 +7,7 @@ from django.shortcuts import render
 views = [
         {"name": "Home", "url": "/"},
         {"name": "Shelters", "url": "/shelters/"},
-        {"name": "About Us", "url": "/about_us/"}
+        {"name": "About Us", "url": "/about-us/"}
     ]
 
 def near_me(request):
