@@ -15,7 +15,7 @@ def near_me(request):
 
 def home_page_view(request):
     return render(request, 'pages/home.html', {"views": views})
-
+  
 def shelters(request):
     data = getLocations()
     data = data["results"]
