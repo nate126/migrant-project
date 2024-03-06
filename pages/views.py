@@ -6,8 +6,7 @@ from django.shortcuts import render
 
 
 def home_page_view(request):
-    return HttpResponse("Hello World")
-
+    return render(request, 'pages/home.html')
 def shelters(request):
     data = getLocations()
     data = data["results"]
