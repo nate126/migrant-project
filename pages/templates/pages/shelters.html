@@ -10,13 +10,16 @@ Shelters Near You
     <hr>
     <div class="shelters-container">
         {% for shelter in shelters %}
-            <div class="shelter">
-                <img src="https://imgs.search.brave.com/UcM6REYlsSjOywh4LBY3YR8WXHR1yNL9IT_-AqVMwlI/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzQxLzc3/L2JlLzQxNzdiZTU3/MjQ1OWQyNWJhOWNh/ZjBkM2I4ZTA5MTli/LmpwZw">
-                <div class="text">
-                    <h3>{{ shelter.name }}</h2>
-                    <p>{{ shelter.vicinity }}</p>
-                </div>
+        <div class="shelter">
+            {% with first_photo=shelter.photos|first %}
+            <img
+                src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={{ first_photo.photo_reference }}&key=AIzaSyBudDAel4hrhurK0iGmhl9H3kMvzwZ3IqY">
+            {% endwith %}
+            <div class="text">
+                <h3>{{ shelter.name }}</h3>
+                <p>{{ shelter.vicinity }}</p>
             </div>
+        </div>
         {% endfor %}
     </div>
 </main>

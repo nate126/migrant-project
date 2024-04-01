@@ -18,7 +18,6 @@ def home_page_view(request):
   
 def shelters(request):
     data = getLocations()
-    data = data["results"]
     return render(request, 'pages/shelters.html', {"shelters" : data, "views": views})
 
 def about_us(request):
