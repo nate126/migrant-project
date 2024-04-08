@@ -21,4 +21,4 @@ def shelters(request):
     return render(request, 'pages/shelters.html', {"shelters" : data, "views": views})
 
 def about_us(request):
-    return render(request, 'pages/about_us.html', {"views": views})
+    return render(request, 'pages/about-us.html', {"views": views})

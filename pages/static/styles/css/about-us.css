@@ -1,0 +1,158 @@
+/* screen - about-us */
+
+.about-us {
+  align-items: center;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  height: 2092px;
+  width: 1440px;
+}
+
+.about-us .title {
+  letter-spacing: -1.28px;
+  line-height: 76.8px;
+  margin-top: 166px;
+  min-height: 77px;
+  text-align: center;
+  width: 1020px;
+}
+
+.about-us .at-mi-center-nyc-we-a {
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-s);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 32.0px;
+  margin-left: 14.0px;
+  margin-top: 142px;
+  min-height: 320px;
+  width: 822px;
+}
+
+.about-us .mi-core-values {
+  letter-spacing: -1.28px;
+  line-height: 76.8px;
+  margin-top: 174px;
+  min-height: 77px;
+  text-align: center;
+  width: 1020px;
+}
+
+.about-us .flex-row {
+  align-items: flex-start;
+  display: flex;
+  gap: 206px;
+  height: 48px;
+  margin-right: 5.0px;
+  margin-top: 37px;
+  min-width: 1081px;
+}
+
+.about-us .inclusion {
+  letter-spacing: -0.88px;
+  line-height: 52.8px;
+  min-height: 48px;
+  text-align: center;
+  white-space: nowrap;
+  width: 438px;
+}
+
+.about-us .fairness {
+  letter-spacing: -0.88px;
+  line-height: 52.8px;
+  min-height: 48px;
+  text-align: center;
+  white-space: nowrap;
+  width: 437px;
+}
+
+.about-us .flex-row-1 {
+  align-items: flex-start;
+  display: flex;
+  gap: 154px;
+  height: 154px;
+  margin-right: 4.0px;
+  margin-top: 38px;
+  min-width: 1132px;
+}
+
+.about-us .inclusion-is-at-the {
+  letter-spacing: 0;
+  line-height: 35.2px;
+  min-height: 152px;
+  text-align: center;
+  width: 489px;
+}
+
+.about-us .span1 {
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 40.0px;
+}
+
+.about-us .fairness-guides-our {
+  align-self: flex-end;
+  letter-spacing: 0;
+  line-height: 35.2px;
+  min-height: 153px;
+  text-align: center;
+  width: 489px;
+}
+
+.about-us .rity-container {
+  align-items: flex-start;
+  display: flex;
+  gap: 206px;
+  height: 48px;
+  margin-right: 5.0px;
+  margin-top: 88px;
+  min-width: 1081px;
+}
+
+.about-us .integrity {
+  letter-spacing: -0.88px;
+  line-height: 52.8px;
+  min-height: 48px;
+  text-align: center;
+  white-space: nowrap;
+  width: 438px;
+}
+
+.about-us .security {
+  letter-spacing: -0.88px;
+  line-height: 52.8px;
+  min-height: 48px;
+  text-align: center;
+  white-space: nowrap;
+  width: 437px;
+}
+
+.about-us .rity-is-container {
+  align-items: flex-start;
+  display: flex;
+  gap: 151px;
+  height: 153px;
+  margin-right: 1.0px;
+  margin-top: 46px;
+  min-width: 1135px;
+}
+
+.about-us .integrity-is-our-fou {
+  letter-spacing: 0;
+  line-height: 35.2px;
+  min-height: 153px;
+  text-align: center;
+  width: 489px;
+}
+
+.about-us .security-is-non-nego {
+  letter-spacing: 0;
+  line-height: 35.2px;
+  min-height: 153px;
+  text-align: center;
+  width: 495px;
+}

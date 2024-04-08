@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'django_extensions',
     'pages',
     'django_google_maps',
+    'django_bootstrap5',
 ]
 
 MIDDLEWARE = [
