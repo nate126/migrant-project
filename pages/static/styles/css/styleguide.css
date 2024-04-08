@@ -1,0 +1,49 @@
+:root { 
+  --black: #000000;
+  --cosmic-cobalt: #323799;
+  --white: #ffffff;
+ 
+  --font-size-l: 32px;
+  --font-size-m: 22px;
+  --font-size-s: 20px;
+  --font-size-xl: 44px;
+  --font-size-xs: 16px;
+  --font-size-xxl: 64px;
+  --font-size-xxs: 14px;
+ 
+  --font-family-inter: "Inter", Helvetica;
+  --font-family-inter-light: "Inter-Light", Helvetica;
+  --font-family-inter-medium: "Inter-Medium", Helvetica;
+  --font-family-newsreader: "Newsreader", Helvetica;
+}
+.inter-normal-black-22px {
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.inter-normal-black-16px {
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.newsreader-bold-cosmic-cobalt-44px {
+  color: var(--cosmic-cobalt);
+  font-family: var(--font-family-newsreader);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.newsreader-normal-black-64px {
+  color: var(--black);
+  font-family: var(--font-family-newsreader);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 400;
+}

@@ -1,0 +1,65 @@
+{% extends "pages/base.html" %}
+{% load static %}
+{% block title %}
+MiCenterNYC | About Us
+{% endblock %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'styles/css/about-us.css' %}" />
+<link rel="stylesheet" href="{% static 'styles/css/globals.css' %}" />
+<link rel="stylesheet" href="{% static 'styles/css/styleguide.css' %}" />
+{% endblock %}
+{% block content %}
+<main>
+  <input type="hidden" id="anPageName" name="page" value="about-us" />
+    <div class="container-center-horizontal">
+      <div class="about-us screen">
+        <h1 class="title newsreader-normal-black-64px">Our Mission</h1>
+        <p class="at-mi-center-nyc-we-a">
+          At MiCenterNYC, we are dedicated to easing the journey of migrants in New York City by providing a
+          comprehensive, accessible, and community-driven online platform. Our mission is to empower migrants by
+          connecting them with vital resources, support networks, and volunteering opportunities, ensuring that they
+          find the assistance they need with ease. Through a user-friendly interface, multilingual support, and
+          collaborative partnerships, we strive to foster a sense of belonging and empowerment within the migrant
+          community while promoting unity and understanding across all backgrounds.
+        </p>
+        <div class="mi-core-values newsreader-normal-black-64px">MiCoreValues</div>
+        <div class="flex-row newsreader-bold-cosmic-cobalt-44px">
+          <div class="inclusion">Inclusion</div>
+          <div class="fairness">Fairness</div>
+        </div>
+        <div class="flex-row-1 inter-normal-black-22px">
+          <p class="inclusion-is-at-the">
+            <span class="inter-normal-black-22px"
+              >Inclusion is at the heart of everything we do. We believe that every migrant, regardless of background or
+              circumstance, deserves a place where they can feel welcomed and supported. Our platform is a space where
+              diversity is celebrated, and everyone&#39;s voice is valued.<br /></span
+            ><span class="span1"></span>
+          </p>
+          <p class="fairness-guides-our">
+            <span class="inter-normal-black-22px"
+              >Fairness guides our actions. We are committed to providing equal opportunities and resources for all
+              migrants, ensuring that no one is left behind. Whether it&#39;s access to information, services, or
+              opportunities, we strive for fairness in every interaction.<br /></span
+            ><span class="span1"></span>
+          </p>
+        </div>
+        <div class="rity-container newsreader-bold-cosmic-cobalt-44px">
+          <div class="integrity">Integrity</div>
+          <div class="security">Security</div>
+        </div>
+        <div class="rity-is-container inter-normal-black-22px">
+          <p class="integrity-is-our-fou">
+            Integrity is our foundation. We uphold the highest ethical standards, fostering trust and transparency
+            within our community. From the information we share to the partnerships we form, integrity guides our
+            decisions every step of the way.
+          </p>
+          <p class="security-is-non-nego">
+            Security is non-negotiable. We understand the importance of safety and privacy for migrants navigating new
+            territories. Our platform is designed with robust security measures to protect personal information and
+            ensure a secure environment for all.
+          </p>
+        </div>
+      </div>
+    </div>
+</main>
+  {% endblock %}
