@@ -7,7 +7,8 @@ from django.shortcuts import render
 views = [
         {"name": "Home", "url": "/"},
         {"name": "Shelters", "url": "/shelters/"},
-        {"name": "About Us", "url": "/about-us/"}
+        {"name": "About Us", "url": "/about-us/"},
+        {"name": "ShelterTemplate", "url": "/shelter-Template"}
     ]
 
 def near_me(request):
@@ -22,3 +23,6 @@ def shelters(request):
 
 def about_us(request):
     return render(request, 'pages/about-us.html', {"views": views})
+
+def shelterTemplate(request):
+    return render(request, 'pages/shelterTemplate.html', {"views": views})
