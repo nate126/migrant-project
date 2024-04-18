@@ -3,21 +3,83 @@
 {% block title %}
 Shelters Near You
 {% endblock %}
+
 {% block content %}
+<style>
+    /* CSS for shelters page */
+
+/* Main shelters container */
+.shelters {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Shelter card container */
+.shelter {
+    display: flex;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Shelter image */
+.shelter img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Text container */
+.text {
+    padding: 20px;
+}
+
+/* Shelter name */
+.text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Shelter details */
+.text p {
+    margin-bottom: 5px;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    .shelter {
+        flex-direction: column;
+    }
+
+    .shelter img {
+        width: 100%;
+        height: auto;
+    }
+
+    .text {
+        padding: 10px;
+    }
+
+    .text h3 {
+        font-size: 1.2rem;
+    }
+}
+
+</style>
 <main class="shelters">
     <h1>Shelters Near You</h1>
     <p>Find a shelter near you.</p>
     <hr>
     <div class="shelters-container">
-        {% for shelter in shelters %}
+        {% for location in locations %}
         <div class="shelter">
-            {% with first_photo=shelter.photos|first %}
-            <img
-                src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={{ first_photo.photo_reference }}&key=AIzaSyBudDAel4hrhurK0iGmhl9H3kMvzwZ3IqY">
-            {% endwith %}
+            <img src="{{ location.photo_url }}" alt="Shelter Image">
             <div class="text">
-                <h3>{{ shelter.name }}</h3>
-                <p>{{ shelter.vicinity }}</p>
+                <h3>{{ location.name }}</h3>
+                <p>Address: {{ location.address }}</p>
             </div>
         </div>
         {% endfor %}

@@ -18,8 +18,9 @@ def home_page_view(request):
     return render(request, 'pages/home.html', {"views": views})
   
 def shelters(request):
-    data = getLocations()
-    return render(request, 'pages/shelters.html', {"shelters" : data, "views": views})
+    import_locations_from_google_maps()
+    locations = Location.objects.all()
+    return render(request, 'pages/shelters.html', {"locations" : locations, "views": views})
 
 def about_us(request):
     return render(request, 'pages/about-us.html', {"views": views})

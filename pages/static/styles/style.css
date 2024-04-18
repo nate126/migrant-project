@@ -3,13 +3,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&family=Inter:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 /* Fonts */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     text-transform: capitalize;
     font-family: "Nunito", sans-serif;
     font-optical-sizing: auto;
     letter-spacing: 0.4px;
 }
-span, text, p, a, li, label, input, button {
+
+span,
+text,
+p,
+a,
+li,
+label,
+input,
+button {
     font-family: "Arapey", serif;
     font-optical-sizing: auto;
     letter-spacing: 0.4px;
@@ -20,65 +33,21 @@ body {
     margin: 1.5rem;
     min-height: 100vh !important;
 }
-/* Shelters Page */
-.shelter {
-    background: linear-gradient(180deg, rgba(14, 15, 36, 0.5), rgba(14, 15, 36, 1));
-    color: white;
-    border-radius: 5px;
-}
-.shelter h3 {
-    padding-bottom: 4px;
-    border-bottom: 0.5px solid white;
-}
-.shelter img {
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
-    position: relative;
-    z-index: -1;
-    filter: blur(2px);
-}
-.shelter .text {
-    margin-top: -70px;
-    padding: 0 10px;
-}
-.shelter p {
-    font-family: "Inter", sans-serif;
-    font-size: 12px;
-}
-.shelters-container {
-    margin-top: 30px;
-    display: grid;
-    gap: 40px;
-    grid-template-columns: repeat(4, 1fr);
-}
-@media (max-width: 1024px) {
-    .shelters-container {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-@media (max-width: 768px) {
-    .shelters-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-@media (max-width: 480px) {
-    .shelters-container {
-        grid-template-columns: 1fr;
-    }
-}
+
 /* About Us */
 .about-us h1 {
     text-align: center;
 }
+
 /* Footer */
 footer {
     margin-top: 60px;
     width: 100%;
     text-align: center;
-    
+
 }
-footer p {  
+
+footer p {
     font-family: "Inter", sans-serif;
     font-size: 14px;
 }
