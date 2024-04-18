@@ -1,6 +1,9 @@
 import requests
 import logging
 from .models import Location
+from decouple import config
+
+secret_key = config('SECRET_KEY')
 
 logger = logging.getLogger(__name__)
 
@@ -10,7 +13,7 @@ def query_google_maps_locations():
         'location': '40.7128,-74.0060',
         'radius': 5000,
         'keyword': 'shelter',
-        'key': 'AIzaSyBmn-SLAxuhmUFHzLd3pwwFKfQx51iBwZg'
+        'key': secret_key
     }
     response = requests.get(url, params=params)
     data = response.json()
@@ -30,7 +33,7 @@ def import_locations_from_google_maps():
             if not location_number:
                 location_number = "Unknown"
             location_photo_reference = result.get("photos", [{}])[0].get("photo_reference", "")
-            photo_url = f"https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={location_photo_reference}&key=AIzaSyBmn-SLAxuhmUFHzLd3pwwFKfQx51iBwZg"
+            photo_url = f"https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={location_photo_reference}&key={secret_key}"
             locations.append(Location(
                 name=location_name,
                 vicinity=location_vicinity,
