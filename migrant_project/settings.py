@@ -47,7 +47,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_extensions',
     'pages',
-    'django_google_maps',
     'django_bootstrap5',
 ]
 
