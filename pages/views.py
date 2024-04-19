@@ -1,14 +1,12 @@
-from django.views.generic import ListView
 from .data import *
-from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
+from .models import Location
 
 # Add all views to view objects
 views = [
         {"name": "Home", "url": "/"},
         {"name": "Shelters", "url": "/shelters/"},
         {"name": "About Us", "url": "/about-us/"},
-        {"name": "ShelterTemplate", "url": "/shelter-Template"}
     ]
 
 def near_me(request):
@@ -27,3 +25,7 @@ def about_us(request):
 
 def shelterTemplate(request):
     return render(request, 'pages/shelterTemplate.html', {"views": views})
+
+def shelter_detail(request, shelter_id):
+    shelter = get_object_or_404(Location, pk=shelter_id)
+    return render(request, 'shelter_template.html', {'shelter': shelter, "views": views})
