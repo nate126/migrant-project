@@ -1,48 +1,52 @@
 import requests
-import logging
 from .models import Location
 from decouple import config
+import json
 
 secret_key = config('SECRET_KEY')
 
-logger = logging.getLogger(__name__)
-
-def query_google_maps_locations():
+def get_all_shelters():
     url = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json'
     params = {
         'location': '40.7128,-74.0060',
         'radius': 5000,
-        'keyword': 'shelter',
+        'keyword': 'homeless shelter',
         'key': secret_key
     }
     response = requests.get(url, params=params)
     data = response.json()
-    return data
+    # write to Location model
+    for shelter in data['results']:
+        location = Location(
+            name=shelter['name'],
+            vicinity=shelter['vicinity'],
+            latitude=shelter['geometry']['location']['lat'],
+            longitude=shelter['geometry']['location']['lng'],
+            business_status=shelter['business_status']
+        )
+        location.save()
+        get_individual_shelter(shelter['place_id'])
 
-def import_locations_from_google_maps():
-    try:
-        data = query_google_maps_locations()
-        locations = []
-        for result in data.get("results", []):
-            location_name = result.get("name", "Unknown")
-            location_vicinity = result.get("vicinity", "Unknown")
-            location_lat = result["geometry"]["location"]["lat"]
-            location_lon = result["geometry"]["location"]["lng"]
-            location_address = result.get("vicinity", "Unknown")
-            location_number = result.get("formatted_phone_number", "")
-            if not location_number:
-                location_number = "Unknown"
-            location_photo_reference = result.get("photos", [{}])[0].get("photo_reference", "")
-            photo_url = f"https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={location_photo_reference}&key={secret_key}"
-            locations.append(Location(
-                name=location_name,
-                vicinity=location_vicinity,
-                latitude=location_lat,
-                longitude=location_lon,
-                address=location_address,
-                number=location_number,
-                photo_url=photo_url
-            ))
-        Location.objects.bulk_create(locations)
-    except Exception as e:
-        logger.error(f"Error importing locations from Google Maps API: {e}")
+
+def get_individual_shelter(place_id):
+    url = f"https://maps.googleapis.com/maps/api/place/details/json?place_id={place_id}&key={secret_key}"
+    response = requests.get(url)
+    data = response.json()
+    data = data['result']
+    # write to Location model
+    photo_ref = data["photos"][0]["photo_reference"] if "photos" in data else None
+    photo_url = f"https://maps.googleapis.com/maps/api/place/photo?maxwidth=1000&photoreference={photo_ref}&key={secret_key}"
+    if "opening_hours" in data and "weekday_text" in data["opening_hours"]:
+        hoursArray = data["opening_hours"]["weekday_text"]
+    else:
+        hoursArray = [] 
+
+    location = Location.objects.get(name=data['name'])
+    location.hoursArray = json.dumps(hoursArray)
+    location.photo_url = photo_url
+    location.address = data['formatted_address']
+    if "formatted_phone_number" in data:
+        location.number = data['formatted_phone_number']
+    else:
+        location.number = "No phone number available"
+    location.save()

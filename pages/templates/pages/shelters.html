@@ -8,66 +8,69 @@ Shelters Near You
 <style>
     /* CSS for shelters page */
 
-/* Main shelters container */
-.shelters {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
+    /* Main shelters container */
+    .shelters {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
 
-/* Shelter card container */
-.shelter {
-    display: flex;
-    margin-bottom: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Shelter image */
-.shelter img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-}
-
-/* Text container */
-.text {
-    padding: 20px;
-}
-
-/* Shelter name */
-.text h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-/* Shelter details */
-.text p {
-    margin-bottom: 5px;
-}
-
-/* Responsive layout */
-@media (max-width: 768px) {
+    /* Shelter card container */
     .shelter {
-        flex-direction: column;
+        display: flex;
+        margin-bottom: 20px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
+    /* Shelter image */
     .shelter img {
-        width: 100%;
-        height: auto;
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
     }
 
+    /* Text container */
     .text {
-        padding: 10px;
+        padding: 20px;
     }
 
+    /* Shelter name */
     .text h3 {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
+        margin-bottom: 10px;
     }
-}
 
+    /* Shelter details */
+    .text p {
+        margin-bottom: 5px;
+    }
+    a {
+        color: black;
+        text-decoration: none;
+    }
+
+    /* Responsive layout */
+    @media (max-width: 768px) {
+        .shelter {
+            flex-direction: column;
+        }
+
+        .shelter img {
+            width: 100%;
+            height: auto;
+        }
+
+        .text {
+            padding: 10px;
+        }
+
+        .text h3 {
+            font-size: 1.2rem;
+        }
+    }
 </style>
 <main class="shelters">
     <h1>Shelters Near You</h1>
@@ -75,13 +78,16 @@ Shelters Near You
     <hr>
     <div class="shelters-container">
         {% for location in locations %}
-        <div class="shelter">
-            <img src="{{ location.photo_url }}" alt="Shelter Image">
-            <div class="text">
-                <h3>{{ location.name }}</h3>
-                <p>Address: {{ location.address }}</p>
+        <a href="{% url 'shelter_detail' location_slug=location.slug %}">
+            <div class="shelter">
+                <img src="{{ location.photo_url }}" alt="Shelter Image">
+                <div class="text">
+                    <h3>{{ location.name }}</h3>
+                    <p>Address: {{ location.address }}</p>
+                    <p>Phone: {{ location.number }}</p>
+                </div>
             </div>
-        </div>
+        </a>
         {% endfor %}
     </div>
 </main>
