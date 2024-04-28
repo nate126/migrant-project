@@ -16,14 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from pages.views import home_page_view, shelter_detail, shelters, about_us, shelterTemplate
+from pages.views import home_page_view, shelter_detail, shelters, about_us
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", home_page_view, name="home"),
     path("shelters/", shelters, name="shelters"),
     path("about-us/", about_us, name="about-us"),
-    path("shelter-Template", shelterTemplate, name="ShelterTemplate"),
-    path('shelter/<int:shelter_id>/', shelter_detail, name='shelter_detail')
+    path("location/<slug:location_slug>/", shelter_detail, name="shelter_detail")
 
 ]

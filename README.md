@@ -25,3 +25,8 @@ python3 manage.py runserver
 ```bash
     pip install -r requirements.txt
 ```
+
+## Initialize environmental variables 
+```bash
+    export $(cat .env | grep -v ^# | xargs)
+```
