@@ -26,7 +26,7 @@ python3 manage.py runserver
     pip install -r requirements.txt
 ```
 
-## Initialize environmental variables 
+## Run script to fetch data (must have .env file)
 ```bash
-    export $(cat .env | grep -v ^# | xargs)
+    ./migrate.sh
 ```
