@@ -25,3 +25,8 @@ python3 manage.py runserver
 ```bash
     pip install -r requirements.txt
 ```
+
+## Run script to fetch data (must have .env file)
+```bash
+    ./migrate.sh
+```
