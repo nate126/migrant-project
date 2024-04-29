@@ -9,7 +9,7 @@ class Location(models.Model):
     number = models.CharField(max_length=255)
     address = models.CharField(max_length=255)
     photo_url = models.URLField(max_length=255, null=True, blank=True)
-    hoursArray = models.JSONField(null=True, blank=True)
+    hours_array = models.JSONField(null=True, blank=True)
     business_status = models.CharField(max_length=255, null=True, blank=True)
     slug = models.SlugField(unique=True, blank=True)
     def save(self, *args, **kwargs):
