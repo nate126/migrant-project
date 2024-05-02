@@ -24,4 +24,6 @@ def about_us(request):
 
 def shelter_detail(request, location_slug):
     location = get_object_or_404(Location, slug=location_slug)
-    return render(request, 'pages/shelter_detail.html', {'shelter': location, "views": views})
+    hours = location.hours_array
+    hours = json.loads(hours)
+    return render(request, 'pages/shelter_detail.html', {'shelter': location, "views": views, 'hours': hours})
