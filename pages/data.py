@@ -70,7 +70,7 @@ def get_individual_shelter(place_id):
     else:
         location.number = "No phone number available"
     # if shelter name contains homeless services, remove from db
-    if "homeless services" in location.name.lower():
+    if "homeless services" or "hotel" in location.name.lower():
         location.delete()
     else:
         location.save()
