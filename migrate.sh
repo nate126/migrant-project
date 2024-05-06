@@ -1,5 +1,6 @@
 #!/bin/bash
 
+pip install -r requirements.txt
 export $(cat .env | grep -v ^# | xargs)
 rm -rf db.sqlite3
 rm -rf pages/migrations
