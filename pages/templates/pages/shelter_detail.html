@@ -1,9 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shelter Information</title>
+{% extends "pages/base.html" %}
+
+{% block title %}
+Shelter Information
+{% endblock %}
+{% block content %}
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -45,29 +45,22 @@
             background-color: #0056b3;
         }
     </style>
-</head>
-<body>
-    <header>
-        {% include 'pages/navbar.html' %}
-    </header>
+<main>
     <div class="container">
-        <h1>{{shelter_location.name}} Information</h1>
+        <h1>Shelter Information</h1>
         <div class="info">
-            <h2><strong>Name:</strong> {{shelter_location.name}}</h2>
-            <p><strong>Address:</strong> {{shelter_location.address}}</p>
-            <p><strong>Phone:</strong> {{shelter_location.number}}</p>
-            <p><strong>Hours:</strong> </p> 
+            <h2><strong>Name:</strong> {{shelter.name}}</h2>
+            <p><strong>Address:</strong> {{shelter.address}}</p>
+            <p><strong>Phone:</strong> {{shelter.number}}</p>
+            <p><strong>Hours:</strong> </p>
             <ul>
                 {% for hour in hours %}
-                    <li>{{ hour }}</li>
+                    <li style="list-style: none;">{{ hour }}</li>
                 {% endfor %}
             </ul>
-            
+            <p><strong>Specialization:</strong> SPECIALIZATION</p>
         </div>
-        <a href="{{ donate_link }}" class="button">Donate</a>
+        <a href="https://ny.covenanthouse.org/donation-form/" class="button">Donate</a>
     </div>
-</body>
-</html>
-
-
-
+</main>
+{% endblock %}
