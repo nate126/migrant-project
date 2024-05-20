@@ -19,6 +19,6 @@ class Location(models.Model):
 
 class MatchShelters(models.Model):
     shelter_location = models.ForeignKey(Location, on_delete=models.CASCADE)
-    donate_link = models.URLField(max_length=200)  # Assuming it is a URL
+    donate_link = models.URLField(max_length=200)  
     def __str__(self):
         return self.shelter_location.name
