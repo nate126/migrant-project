@@ -16,3 +16,9 @@ class Location(models.Model):
         if not self.slug:
             self.slug = slugify(self.name)
         super().save(*args, **kwargs)
+
+class MatchShelters(models.Model):
+    shelter_location = models.ForeignKey(Location, on_delete=models.CASCADE)
+    donate_link = models.URLField(max_length=200)  # Assuming it is a URL
+    def __str__(self):
+        return self.shelter_location.name
