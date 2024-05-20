@@ -53,7 +53,7 @@
 .about-us .inclusion {
   letter-spacing: -0.88px;
   line-height: 52.8px;
-  min-height: 48px;
+  min-height: 154px;
   text-align: center;
   white-space: nowrap;
   width: 438px;
@@ -71,14 +71,15 @@
 .about-us .flex-row-1 {
   align-items: flex-start;
   display: flex;
-  gap: 154px;
+  gap: 206px;
   height: 154px;
   margin-right: 4.0px;
-  margin-top: 38px;
+  margin-top: 100px;
   min-width: 1132px;
 }
 
 .about-us .inclusion-is-at-the {
+  align-self: flex-end;
   letter-spacing: 0;
   line-height: 35.2px;
   min-height: 152px;
