@@ -40,7 +40,9 @@ def about_us(request):
 def shelter_detail(request, location_slug):
     shelter_location = get_object_or_404(Location, slug=location_slug)
     donate_link = matchShelters(shelter_location.name)  # Get the donate link using the shelter name
+    hours = json.loads(shelter_location.hours_array)
     return render(request, 'pages/shelter_detail.html', {
         'shelter_location': shelter_location,
+        'hours': hours,
         'donate_link': donate_link
     })
