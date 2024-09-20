@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-p)_y2hj%%9utm++hd00$anfqpr2d-sgi*!hzj!t=l)sc+97oj5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['sea-turtle-app-plh5g.ondigitalocean.app', 'localhost', '127.0.0.1']
+
 
 
 # Application definition
