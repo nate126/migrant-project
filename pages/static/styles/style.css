@@ -32,6 +32,7 @@ button {
 body {
     margin: 1.5rem;
     min-height: 100vh !important;
+    padding: 5px;
 }
 
 /* About Us */
@@ -43,8 +44,7 @@ body {
 footer {
     margin-top: 60px;
     width: 100%;
-    text-align: center;
-
+    
 }
 
 footer p {
