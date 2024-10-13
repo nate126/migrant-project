@@ -9,12 +9,12 @@ MiCenterNYC | About Us
 <link rel="stylesheet" href="{% static 'styles/css/styleguide.css' %}" />
 {% endblock %}
 {% block content %}
-<main>
+<main style="background-color: #f9f9f9; padding: 20px; font-family: Arial, sans-serif;">
   <input type="hidden" id="anPageName" name="page" value="about-us" />
-    <div class="container-center-horizontal">
-      <div class="about-us screen">
-        <h1 class="title newsreader-normal-black-64px">Our Mission</h1>
-        <p class="at-mi-center-nyc-we-a">
+    <div class="container-center-horizontal" style="max-width: 800px; margin: 0 auto;">
+      <div class="about-us screen" style="background-color: #ffffff; border-radius: 8px; padding: 30px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <h1 class="title newsreader-normal-black-64px" style="font-size: 36px; color: #333; margin-bottom: 20px;">Our Mission</h1>
+        <p class="at-mi-center-nyc-we-a" style="line-height: 1.6; color: #555; font-size: 18px; margin-bottom: 20px;">
           At MiCenterNYC, we are dedicated to easing the journey of migrants in New York City by providing a
           comprehensive, accessible, and community-driven online platform. Our mission is to empower migrants by
           connecting them with vital resources, support networks, and volunteering opportunities, ensuring that they
@@ -22,20 +22,20 @@ MiCenterNYC | About Us
           collaborative partnerships, we strive to foster a sense of belonging and empowerment within the migrant
           community while promoting unity and understanding across all backgrounds.
         </p>
-        <div class="mi-core-values newsreader-normal-black-64px">MiCoreValues</div>
-          <div>
-            <h3>Empathy</h3>
-            <p>We understand that every migrant's journey is unique, and we are committed to approaching each story with an open mind and without judgment. By recognizing their struggles and honoring their resilience, we aim to offer the necessary resources.</p>
+        <div class="mi-core-values newsreader-normal-black-64px" style="font-size: 24px; color: #333; margin-bottom: 20px;">MiCoreValues</div>
+          <div style="margin-bottom: 20px;">
+            <h3 style="color: #007BFF;">Empathy</h3>
+            <p style="line-height: 1.6; color: #555;">We understand that every migrant's journey is unique, and we are committed to approaching each story with an open mind and without judgment. By recognizing their struggles and honoring their resilience, we aim to offer the necessary resources.</p>
           </div>
-          <div>
-            <h3>Inclusivity</h3>
-            <p>Our unwavering commitment to inclusivity ensures that all migrants, regardless of their homeland or cultural background, will have easy access to our website's resources. Our user-friendly shelter page is designed to help migrants quickly find nearby shelters and provides essential details about each location.</p>
+          <div style="margin-bottom: 20px;">
+            <h3 style="color: #007BFF;">Inclusivity</h3>
+            <p style="line-height: 1.6; color: #555;">Our unwavering commitment to inclusivity ensures that all migrants, regardless of their homeland or cultural background, will have easy access to our website's resources. Our user-friendly shelter page is designed to help migrants quickly find nearby shelters and provides essential details about each location.</p>
           </div>
-          <div>
-            <h3>Collaboration</h3>
-            <p>We believe that collaborating and building strong relationships with local shelters is critical to supporting migrants on their journeys. Through collaboration efforts, we can ensure that every migrant is accounted for and given the proper resources. </p>
+          <div style="margin-bottom: 20px;">
+            <h3 style="color: #007BFF;">Collaboration</h3>
+            <p style="line-height: 1.6; color: #555;">We believe that collaborating and building strong relationships with local shelters is critical to supporting migrants on their journeys. Through collaboration efforts, we can ensure that every migrant is accounted for and given the proper resources.</p>
           </div>
       </div>
     </div>
 </main>
-  {% endblock %}
+{% endblock %}
