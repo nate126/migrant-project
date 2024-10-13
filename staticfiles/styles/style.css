@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&family=Inter:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* Fonts */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-transform: capitalize;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    letter-spacing: 0.4px;
+}
+
+span,
+text,
+p,
+a,
+li,
+label,
+input,
+button {
+    font-family: "Arapey", serif;
+    font-optical-sizing: auto;
+    letter-spacing: 0.4px;
+}
+
+/* Universal */
+body {
+    margin: 1.5rem;
+    min-height: 100vh !important;
+    padding: 5px;
+}
+
+/* About Us */
+.about-us h1 {
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    margin-top: 60px;
+    width: 100%;
+    
+}
+
+footer p {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+}

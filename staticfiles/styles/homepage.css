@@ -1,0 +1,248 @@
+/* @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"); */
+@import url("https://fonts.googleapis.com/css?family=Newsreader:500,400|Inter:500,400,600,300");
+@import url("https://px.animaapp.com/65e6152e1c24d2ac13c35f14.65e6152f1c24d2ac13c35f17.O904rq7.hcp.png");
+:root { 
+    --black: #000000;
+    --white: #ffffff;
+   
+    --font-size-l: 32px;
+    --font-size-m: 20px;
+    --font-size-s: 16px;
+    --font-size-xl: 64px;
+    --font-size-xs: 14px;
+   
+    --font-family-inter: "Inter", Helvetica;
+    --font-family-newsreader: "Newsreader", Helvetica;
+  }
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.homepage {
+    align-items: center;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: 125px;
+    width: 1440px;
+  }
+  
+  .homepage .flex-col {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 1137px;
+    width: 1440px;
+  }
+  
+  .homepage .mi-center-nyc {
+    color: #323699;
+    font-family: var(--font-family-newsreader);
+    font-size: var(--font-size-l);
+    font-weight: 500;
+    letter-spacing: -0.32px;
+    line-height: 32px;
+    min-width: 198px;
+    white-space: nowrap;
+  }
+  
+  .homepage .who-we-are {
+    color: var(--black);
+    font-family: var(--font-family-inter);
+    font-size: var(--font-size-s);
+    font-weight: 400;
+    height: 21px;
+    letter-spacing: 0;
+    line-height: 20.8px;
+    margin-bottom: 1.0px;
+    margin-left: 671px;
+    min-width: 90px;
+    text-align: center;
+    white-space: nowrap;
+  }
+  
+  .homepage .my-profile {
+    color: var(--black);
+    font-family: var(--font-family-inter);
+    font-size: var(--font-size-s);
+    font-weight: 400;
+    height: 21px;
+    letter-spacing: 0;
+    line-height: 20.8px;
+    margin-bottom: 2.0px;
+    margin-left: 39px;
+    min-width: 76px;
+    text-align: center;
+    white-space: nowrap;
+  }
+  
+  .homepage .cart-button {
+    align-items: flex-start;
+    background-color: #323799;
+    border-radius: 8px;
+    display: flex;
+    height: 48px;
+    margin-left: 48px;
+    overflow: hidden;
+    padding: 12.5px 30px;
+    width: 126px;
+  }
+  
+  .homepage .near-me {
+    color: var(--white);
+    font-family: var(--font-family-inter);
+    font-size: var(--font-size-s);
+    font-weight: 600;
+    height: 21px;
+    letter-spacing: 0;
+    line-height: 20.8px;
+    margin-left: 1px;
+    min-width: 65px;
+    text-align: center;
+    white-space: nowrap;
+  }
+  
+  .homepage .title {
+    color: var(--black);
+    font-family: var(--font-family-newsreader);
+    font-size: var(--font-size-xl);
+    font-weight: 400;
+    letter-spacing: -1.28px;
+    line-height: 76.8px;
+    margin-left: 14.0px;
+    margin-top: 166px;
+    min-height: 77px;
+    text-align: center;
+    width: 1020px;
+  }
+  
+  .homepage .button {
+    align-items: flex-start;
+    background-color: #323799;
+    border-radius: 8px;
+    display: flex;
+    height: 64px;
+    margin-right: 1.0px;
+    margin-top: 82px;
+    overflow: hidden;
+    padding: 18px 50px;
+    width: 311px;
+  }
+  
+  .homepage .find-centers-near-me {
+    color: var(--white);
+    font-family: var(--font-family-inter);
+    font-size: var(--font-size-m);
+    font-weight: 600;
+    height: 26px;
+    letter-spacing: 0;
+    line-height: 26.0px;
+    white-space: nowrap;
+  }
+  
+  .homepage .we-believe-container {
+    align-items: flex-start;
+    display: flex;
+    gap: 32px;
+    height: 512px;
+    margin-right: 3.0px;
+    margin-top: 124px;
+    min-width: 1035px;
+  }
+  
+  .homepage .what-we-believe {
+    color: var(--black);
+    font-family: var(--font-family-inter);
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    letter-spacing: 0.56px;
+    line-height: 22.4px;
+    margin-top: 5px;
+    width: 181px;
+  }
+  
+  .homepage .we-believe-in-produc {
+    color: var(--black);
+    font-family: var(--font-family-inter);
+    font-size: var(--font-size-m);
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 32.0px;
+    min-height: 512px;
+    width: 822px;
+  }
+  
+  .homepage .flex-row {
+    align-items: flex-end;
+    display: flex;
+    gap: 103px;
+    margin-left: 52.0px;
+    min-width: 1300px;
+  }
+  
+  .homepage .im2-1 {
+    height: 697px;
+    object-fit: cover;
+    width: 461px;
+  }
+  
+  .homepage .flex-col-1 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    margin-bottom: 23px;
+    min-height: 512px;
+    width: 736px;
+  }
+  
+  .homepage .im1-1 {
+    height: 473px;
+    object-fit: cover;
+    width: 710px;
+  }
+  
+  .homepage .los-inmigrantes-de-mxico-xxxxxxxxxx {
+    color: var(--black);
+    font-family: var(--font-family-inter);
+    font-size: var(--font-size-xs);
+    font-weight: 400;
+    letter-spacing: -0.14px;
+    line-height: 22.4px;
+    width: 736px;
+  }
+  
+  .homepage .span0 {
+    font-weight: 500;
+    letter-spacing: -0.02px;
+  }
+  
+  .homepage .span1 {
+    font-weight: 300;
+    letter-spacing: -0.02px;
+  }

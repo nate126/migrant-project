@@ -1,0 +1,52 @@
+.navbar {
+    background-color: #fff;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.navbar-toggler {
+    border: none;
+    color: #333;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 15px;
+}
+
+.navbar-nav .nav-link {
+    color: #333;
+    font-weight: bold;
+}
+
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        display: none;
+    }
+
+    .navbar-nav.show {
+        display: flex;
+        flex-direction: column;
+        background-color: #f8f9fa;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+    }
+
+    .navbar-nav.show .nav-item {
+        margin-right: 0;
+        text-align: center;
+    }
+}
