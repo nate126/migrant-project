@@ -4,25 +4,12 @@
 MiCenterNYC
 {% endblock %}
 {% block content %}
-<main>
-<div class="container-center-horizontal">
-    <div class="homepage screen">
-      <div class="flex-col">
-        
-        <h1 class="title">Find the Center Perfect for YOU</h1>
-        <a href="{% url 'shelters' %}" class="button" style="color: white;">Find Centers Near Me</a>
-
-        
-      <!-- <div class="flex-row">
-        <img class="im2-1" src="img/im2-1.png" alt="im2 1">
-        <div class="flex-col-1">
-          <img class="im1-1" src="img/im1-1.png" alt="im1 1">
-          <p class="los-inmigrantes-de-mxico-xxxxxxxxxx">
-            <span class="span0">Los inmigrantes de México</span><span class="span1"> — xxxxxxxxxx</span>
-          </p>
+<main style="background-color: #f0f0f0; padding: 40px 20px;">
+    <div class="container-center-horizontal" style="max-width: 800px; margin: 0 auto;">
+        <div class="homepage screen" style="background-color: #fff; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); padding: 30px; text-align: center;">
+            <h1 class="title" style="font-size: 36px; color: #333; margin-bottom: 20px;">Find the Center Perfect for YOU</h1>
+            <a href="{% url 'shelters' %}" class="button" style="display: inline-block; background-color: #007BFF; color: white; padding: 15px 30px; border-radius: 5px; text-decoration: none; font-size: 18px; transition: background-color 0.3s;">Find Centers Near Me</a>
         </div>
-      </div> -->
     </div>
-  </div>
 </main>
-  {% endblock %}
+{% endblock %}
