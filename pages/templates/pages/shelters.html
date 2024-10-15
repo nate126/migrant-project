@@ -26,7 +26,11 @@ Shelters Near You
     }
 
     /* Shelter image */
-    
+    .shelter img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+    }
 
     /* Text container */
     .text {
@@ -76,7 +80,6 @@ Shelters Near You
         {% for location in locations %}
         <a href="{% url 'shelter_detail' location_slug=location.slug %}">
             <div class="shelter">
-                <img src="{{ location.photo_url }}" alt="Shelter Image">
                 <div class="text">
                     <h3>{{ location.name }}</h3>
                     <p>Address: {{ location.address }}</p>
